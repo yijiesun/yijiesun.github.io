@@ -30,7 +30,7 @@
   overflow-x: hidden
   -webkit-overflow-scrolling touch
   &.on
-    margin-left 0 !important
+    margin-left 0
 
 .sidebar
   position fixed
@@ -97,9 +97,13 @@
     .forkMe
       display none
   .content
+    transform translateX(aside-width) !important
     &.on
-      margin-left -1px !important
+      transform translateX(0) !important
   .sidebar
     background-color body-color
+    left 0 !important
+    &.on
+      left - aside-width !important
   .navbar-toggle
     transform: scale(1.1)
